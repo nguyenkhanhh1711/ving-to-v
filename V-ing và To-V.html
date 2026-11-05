@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>V-ing và To-V</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#cfe1ee;--bg2:#8fb3cf;--ink:#16324a;--mute:#3d6283;--navy:#1d4468;--white:#fff;--tab:#7ea4c3;--card:rgba(255,255,255,.55);--q:rgba(255,255,255,.6);--line:rgba(29,68,104,.25);--ok:#1b7f50;--okbg:rgba(90,200,140,.3);--bad:#c0355a;--badbg:rgba(240,90,120,.22);--hl:rgba(255,255,255,.55);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg1:#0d1b2a;--bg2:#1c3954;--ink:#e6f0f8;--mute:#9bb8d0;--navy:#a9cde8;--tab:#2d5476;--card:rgba(255,255,255,.07);--q:rgba(255,255,255,.07);--line:rgba(169,205,232,.25);--ok:#7fe0a8;--okbg:rgba(80,200,140,.22);--bad:#ff8fa8;--badbg:rgba(255,100,130,.2);--hl:rgba(169,205,232,.15)}}
+:root[data-theme="dark"]{color-scheme:dark;--bg1:#0d1b2a;--bg2:#1c3954;--ink:#e6f0f8;--mute:#9bb8d0;--navy:#a9cde8;--tab:#2d5476;--card:rgba(255,255,255,.07);--q:rgba(255,255,255,.07);--line:rgba(169,205,232,.25);--ok:#7fe0a8;--okbg:rgba(80,200,140,.22);--bad:#ff8fa8;--badbg:rgba(255,100,130,.2);--hl:rgba(169,205,232,.15)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;min-height:100vh;background:linear-gradient(180deg,var(--bg1),var(--bg2)) fixed;color:var(--ink);font:16px/1.7 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0;line-height:1.15}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;align-items:center;overflow-x:auto;padding:10px 14px;background:color-mix(in srgb,var(--bg1) 80%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-size:14px;padding:4px 12px;border-radius:20px}nav a:hover,nav a.on{background:var(--hl);color:var(--navy)}
+nav .sc{margin-left:auto;white-space:nowrap;font-size:14px;color:var(--navy);font-weight:600}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+#fx i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.5),transparent 70%);animation:dr 18s ease-in-out infinite alternate}
+@keyframes dr{to{transform:translate(60px,-80px) scale(1.2)}}
+main{position:relative;z-index:1;max-width:820px;margin:auto;padding:0 18px 80px}
+.hero{position:relative;padding:60px 0 20px}
+.hero h1{font-size:clamp(54px,15vw,120px);font-style:italic;font-weight:700;color:var(--navy);letter-spacing:-.02em}.hero h1 span{color:var(--white);font-style:normal;font-weight:500;text-shadow:0 2px 14px rgba(29,68,104,.35)}
+.fr{display:inline-block;margin-top:16px;padding:14px 20px;border:1px dashed var(--navy);color:var(--ink);max-width:460px;background:var(--hl)}
+.fr em{font-weight:600}
+.bd{position:absolute;filter:drop-shadow(0 6px 10px rgba(29,68,104,.3));animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px) rotate(3deg)}}
+section{padding:46px 0 4px}
+.tab{display:inline-block;background:var(--tab);border-radius:16px 16px 0 0;padding:8px 24px 6px;margin-left:calc(var(--i)*6%)}
+.tab h2{font-size:clamp(20px,4.5vw,28px);color:var(--white)}
+.fd{background:var(--card);border:1px solid var(--line);border-radius:0 18px 18px 18px;padding:18px 20px 8px;backdrop-filter:blur(6px)}
+.rv{opacity:0;transform:translateY(26px);transition:.8s}.rv.in{opacity:1;transform:none}
+.th p{margin:10px 0}.th h3{font-size:20px;color:var(--navy);margin:18px 0 6px}
+.bad{color:var(--bad);font-weight:600}.good{color:var(--ok);font-weight:600}
+.ch{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.ch span{background:var(--hl);border:1px solid var(--line);border-radius:18px;padding:2px 12px;font-size:14.5px}.ch i{color:var(--mute);margin-left:6px;font-size:13.5px}
+.rule{border-left:4px solid var(--navy);background:var(--hl);padding:8px 14px;border-radius:0 10px 10px 0;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0}th,td{text-align:left;padding:8px;border:1px solid var(--line);vertical-align:top}th{background:var(--hl);font-family:"Playfair Display",serif}
+.q{background:var(--q);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 14px}
+.q>p{margin:0 0 8px;font-weight:500}.q small{color:var(--navy);font-weight:700}
+.o{display:block;width:100%;text-align:left;font:inherit;color:var(--ink);background:none;border:1px solid var(--line);border-radius:10px;padding:7px 12px;margin:5px 0;cursor:pointer;transition:.2s}
+.o:hover:not(:disabled){border-color:var(--navy);background:var(--hl)}.o:disabled{cursor:default}
+.o.ok{background:var(--okbg);border-color:var(--ok)}.o.no{background:var(--badbg);border-color:var(--bad);animation:sh .3s}
+@keyframes sh{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.ex{display:none;margin-top:8px;padding:9px 12px;border-radius:10px;font-size:14.5px;background:var(--hl)}.ex.show{display:block;animation:fd .4s}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}}
+input{font:inherit;color:var(--ink);background:var(--hl);border:1px solid var(--line);border-radius:8px;padding:6px 12px;width:min(260px,100%)}
+.bt{font:inherit;font-size:14px;background:var(--navy);color:var(--bg1);border:0;border-radius:20px;padding:7px 18px;margin-left:8px;cursor:pointer}.bt:disabled{opacity:.5}
+.mh{font-family:"Playfair Display",serif;font-size:19px;color:var(--navy);margin:16px 0 8px}
+#sum{display:none;text-align:center;border:1px dashed var(--navy);padding:26px;margin-top:40px;background:var(--hl)}#sum.show{display:block;animation:fd .6s}
+#sum b{display:block;font:700 44px "Playfair Display",serif;color:var(--navy)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(max-width:560px){.bd{opacity:.6;transform:scale(.7)}}
+</style>
+</head>
+<body>
+<div id="fx"></div>
+<nav id="nv"></nav>
+<main>
+<header class="hero">
+<svg class="bd" style="right:0;top:20px" width="110" height="120" viewBox="0 0 110 120"><path d="M55 20c-20 0-30 20-28 45 2 25 14 40 28 40s26-15 28-40c2-25-8-45-28-45z" fill="#6f9fc4"/><path d="M27 60C8 50 4 80 18 98c8-10 10-24 9-38zM83 60c19-10 23 20 9 38-8-10-10-24-9-38z" fill="#4f82ad"/><circle cx="43" cy="48" r="11" fill="#fff"/><circle cx="67" cy="48" r="11" fill="#fff"/><circle cx="43" cy="49" r="5" fill="#16324a"/><circle cx="67" cy="49" r="5" fill="#16324a"/><path d="M55 54l-5 9h10z" fill="#e8b66a"/><path d="M38 78q17 12 34 0M40 90q15 10 30 0" stroke="#fff" stroke-opacity=".6" fill="none" stroke-width="2"/></svg>
+<h1>V-ing<br><span>&amp; To-V</span></h1>
+<div class="fr">Chuyên đề ngữ pháp dành cho <em>bản chất</em>, <em>phân biệt cấu trúc</em> và <em>bài tập thực chiến</em>. Làm xong câu nào là có đáp án giải thích ngay.</div>
+</header>
+<div id="app"></div>
+<div id="sum"><span>Hoàn thành chuyên đề!</span><b id="fs"></b><span id="fp"></span></div>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const ch=s=>'<div class="ch">'+s.split(";").map(x=>{const[a,b]=x.split(":");return`<span><b>${a}</b>${b?`<i>${b}</i>`:""}</span>`}).join("")+"</div>";
+const S=[
+{k:"Bản chất",t:"Phần 1: Bản chất của V-ing và To-V",h:`<h3>Tại sao tiếng Anh sinh ra V-ing (Gerund) và To-V (Infinitive)?</h3><p>Một câu hoàn chỉnh chỉ được phép có <b>MỘT</b> động từ chính chia theo thì (Tense). Muốn thêm hành động thứ hai, bạn không được để hai động từ nguyên mẫu đứng cạnh nhau “đánh nhau”.</p><p>Động từ thứ hai bắt buộc phải biến hình thành <b>V-ing</b> (danh động từ) hoặc <b>To-V</b> (động từ nguyên mẫu có to). Chọn dạng nào phụ thuộc hoàn toàn vào <b>động từ đứng trước nó</b>.</p><p><span class="bad">[SAI]</span> I enjoy play football.<br><span class="good">[ĐÚNG, dùng V-ing]</span> I enjoy playing football. (sau enjoy phải là V-ing)<br><span class="good">[ĐÚNG, dùng To-V]</span> I want to play football. (sau want phải là To-V)</p>`},
+{k:"V-ing",t:"Phần 2: Động từ theo sau bởi V-ing",h:`<p>Thường diễn tả: sở thích, sự né tránh, sự hoàn thành/từ bỏ, hoặc sự việc đã xảy ra.</p><h3>1. Sở thích / Đam mê</h3>${ch("enjoy:thưởng thức;fancy:thích;detest / hate:ghét;dislike:không thích;mind:phiền lòng (Do you mind closing the door?)")}<h3>2. Né tránh / Trì hoãn</h3>${ch("avoid:tránh;delay / postpone:trì hoãn;deny:phủ nhận;resist:chống cự;miss:lỡ mất")}<h3>3. Gợi ý / Cân nhắc</h3>${ch("suggest:đề nghị, gợi ý;consider:cân nhắc;recommend:khuyên, đề xuất;discuss:thảo luận;imagine:tưởng tượng")}<h3>4. Hoàn thành / Từ bỏ</h3>${ch("finish:hoàn thành;give up:từ bỏ;quit:nghỉ, bỏ;admit:thừa nhận;practice:luyện tập")}<h3>5. Bổ sung thường gặp</h3>${ch("keep:tiếp tục, giữ (Keep smiling!);involve:liên quan;risk:mạo hiểm;appreciate:trân trọng;tolerate:khoan dung, chịu đựng;mention:đề cập")}<div class="rule"><b>Quy tắc bất di bất dịch: sau giới từ là V-ing.</b> Bất kỳ động từ nào đứng sau giới từ (in, on, at, about, for, of, with, without...) đều bắt buộc thêm -ing.<br>VD: I am interested in reading books. / She left without saying goodbye.</div>`,
+mt:"Mini-Test 1: V-ing",m:`He suggested (go) ___ to the cinema tonight.|going|suggest + V-ing.
+Are you fond of (listen) ___ to music?|listening|Sau giới từ “of” là V-ing.
+She avoids (meet) ___ him because they had a fight.|meeting|avoid + V-ing.`},
+{k:"To-V",t:"Phần 3: Động từ theo sau bởi To-V",h:`<p>Thường diễn tả: dự định, mong muốn, kế hoạch cho tương lai.</p>${ch("want:muốn;hope:hi vọng;expect:mong đợi;plan:lên kế hoạch;decide:quyết định;agree:đồng ý;refuse:từ chối;promise:hứa;offer:đề nghị giúp đỡ;learn:học cách;afford:đủ khả năng chi trả;manage:xoay xở, cố gắng;threaten:đe dọa;pretend:giả vờ;arrange:sắp xếp")}<h3>Đặc biệt: V (nhờ vả, khuyên bảo) + Tân ngữ + To-V</h3><div class="rule">ask / tell / require O + to V (yêu cầu ai làm gì)<br>advise O + to V (khuyên ai làm gì)<br>invite O + to V (mời ai làm gì)<br>allow / permit O + to V (cho phép ai làm gì)</div>`,
+mt:"Mini-Test 2: To-V",m:`They decided (buy) ___ a new car.|to buy|decide + To-V.
+My mother told me (clean) ___ my room.|to clean|tell O + To-V.
+I promise (not tell) ___ anyone your secret.|not to tell|promise + To-V; phủ định thêm “not” trước to: not to tell.`},
+{k:"Đa nhân cách",t:"Phần 4: Động từ “đa nhân cách” (bẫy đề thi)",h:`<h3>Nhóm 1: V-ing hay To-V đều được, nghĩa không đổi</h3>${ch("start;begin;continue;like;love;prefer;hate")}<p>VD: I started to learn English = I started learning English.</p><h3>Nhóm 2: Nghĩa thay đổi hoàn toàn (cực kỳ quan trọng)</h3><table><tr><th>Từ</th><th>+ TO-V</th><th>+ V-ING</th></tr><tr><td><b>Stop</b></td><td>Dừng việc đang làm lại ĐỂ chuyển sang việc khác. (He stopped to smoke: anh ta dừng xe lại để hút thuốc.)</td><td>Chấm dứt hẳn một việc đang làm. (He stopped smoking: anh ta đã bỏ hẳn thuốc lá.)</td></tr><tr><td><b>Remember / Forget</b></td><td>Nhớ/quên PHẢI làm việc gì (nhiệm vụ tương lai, chưa làm). (Remember to lock the door.)</td><td>Nhớ/quên ĐÃ làm việc gì (kỷ niệm quá khứ, đã làm rồi). (I remember meeting her before.)</td></tr><tr><td><b>Regret</b></td><td>Tiếc PHẢI báo một tin buồn (to inform, to tell). (I regret to inform you that you failed.)</td><td>Hối hận VÌ ĐÃ làm việc trong quá khứ. (I regret buying this old car.)</td></tr><tr><td><b>Try</b></td><td>Cố gắng, nỗ lực (đòi hỏi sức lực, trí tuệ). (I try to pass the exam.)</td><td>Thử làm việc gì xem kết quả ra sao. (Try eating this cake.)</td></tr></table>`,
+mt:"Mini-Test 3: Nghĩa thay đổi",m:`Oh no! I forgot (lock) ___ the door before leaving the house.|to lock|Quên chưa làm nhiệm vụ khóa cửa: forget + To-V.
+The doctor advised him to stop (drink) ___ alcohol.|drinking|Bỏ hẳn việc uống rượu: stop + V-ing.`},
+{k:"Bare Inf",t:"Phần 5: Động từ nguyên thể không To",h:`<p>Có 3 động từ “quyền lực” bắt buộc động từ theo sau ở dạng nguyên thể không to (V-bare):</p><div class="rule"><b>MAKE + O + V (bare):</b> bắt buộc ai làm gì. (My mom made me clean the floor.)<br><b>LET + O + V (bare):</b> cho phép ai làm gì. (Let me go.)<br><b>HELP + O + V (bare) / (To V):</b> giúp ai làm gì, cả 2 dạng đều đúng. (He helped me do / to do my homework.)</div>`},
+{k:"Lý thuyết",t:"Phần 6: Trắc nghiệm lý thuyết (15 câu)",sub:"Nắm vững các quy tắc từ loại và cấu trúc cốt lõi.",d:`1|Nguyên tắc cơ bản nhất khi hai động từ đứng cạnh nhau trong tiếng Anh là gì?|Động từ thứ hai phải biến đổi thành To-V hoặc V-ing (tùy thuộc vào động từ thứ nhất).|Động từ thứ hai bắt buộc phải thêm “-s” hoặc “-ed”.|Động từ thứ hai luôn là động từ nguyên mẫu không To.|Cả hai động từ đều chia theo thì của câu.|0|Câu chỉ có một động từ chia thì; động từ thứ hai phải là To-V hoặc V-ing tùy động từ đứng trước.
+2|Đứng sau giới từ (in, on, at, for, about...), nếu là một động từ thì động từ đó phải ở dạng nào?|V-ed|V-nguyên mẫu|To-V|V-ing|3|Sau giới từ luôn là V-ing.
+3|Nhóm động từ chỉ sự né tránh, từ bỏ, trì hoãn (avoid, give up, postpone) thường đi kèm loại từ nào phía sau?|V-ing|V-ed|V-nguyên mẫu|To-V|0|Các động từ nhóm này theo sau bởi V-ing.
+4|Các động từ chỉ dự định, mong muốn trong tương lai (want, hope, plan, decide) thường yêu cầu động từ theo sau ở dạng nào?|V-ing|V-nguyên mẫu|To-V|V-ed|2|Nhóm dự định, mong muốn, kế hoạch + To-V.
+5|Cấu trúc “Stop + To-V” mang ý nghĩa gì?|Dừng việc đang làm lại để chuyển sang làm một việc khác.|Khuyên ai đó nên dừng lại.|Phủ nhận việc đã làm.|Chấm dứt hoàn toàn một việc đang làm.|0|Stop to V = dừng lại để làm việc khác. Stop V-ing mới là chấm dứt hẳn.
+6|Cấu trúc “Remember + V-ing” được sử dụng khi nào?|Nhớ lại một sự việc, hành động ĐÃ LÀM trong quá khứ.|Quên mất việc đã làm.|Yêu cầu người khác nhớ làm gì đó.|Nhớ một nhiệm vụ cần phải làm trong tương lai.|0|Remember V-ing = nhớ đã làm; remember to V = nhớ phải làm.
+7|Từ nào sau đây mang nghĩa “khuyên bảo” và đi với cấu trúc O + To-V?|avoid|suggest|advise|admit|2|advise O + to V.
+8|“Make + Object” (bắt buộc ai làm gì) sẽ đi với động từ ở dạng nào?|V-ing|V-ed|To-V|V-nguyên mẫu không To (Bare infinitive)|3|make + O + V (bare).
+9|Sự khác biệt giữa “Try + To-V” và “Try + V-ing” là gì?|To-V là “thử”, V-ing là “cố gắng”.|Cả hai đều có nghĩa là “cố gắng”.|To-V là “cố gắng, nỗ lực”, V-ing là “thử làm gì đó xem kết quả ra sao”.|Cả hai đều có nghĩa là “thử”.|2|try to V = cố gắng; try V-ing = thử xem kết quả.
+10|“Regret + To-V” thường đi kèm động từ nào để mang nghĩa “lấy làm tiếc phải thông báo/nói”?|to go, to come|to play, to watch|to inform, to tell, to say|to buy, to sell|2|regret to inform / tell / say = tiếc phải thông báo.
+11|Nhóm động từ nào có thể đi với CẢ To-V và V-ing mà nghĩa KHÔNG thay đổi đáng kể?|avoid, deny, admit|start, begin, continue, like|decide, plan, arrange|stop, remember, forget|1|start, begin, continue, like, love, prefer, hate.
+12|“Let + Object” (cho phép ai làm gì) yêu cầu động từ theo sau ở dạng nào?|V-s/es|V-nguyên mẫu không To|V-ing|To-V|1|let + O + V (bare).
+13|Động từ “Suggest” (gợi ý) khi đi trực tiếp với một động từ khác thì động từ đó chia ở dạng nào?|V-ed|V-ing|To-V|V-nguyên mẫu|1|suggest + V-ing.
+14|Động từ “Refuse” (từ chối) theo sau bởi dạng nào?|V-nguyên mẫu|V-ed|V-ing|To-V|3|refuse + To-V.
+15|“Help + Object” có thể đi với những dạng động từ nào?|Chỉ đi với To-V.|Chỉ đi với V-ing.|Chỉ đi với V-ed.|Có thể đi với CẢ To-V hoặc V-nguyên mẫu không To.|3|help O (to) V: cả hai dạng đều đúng.`},
+{k:"Thực chiến",t:"Phần 7: Trắc nghiệm thực chiến (50 câu)",sub:"Chú ý các bẫy đổi nghĩa: Stop, Remember, Regret, Try...",d:`16|I really enjoy ___ to music while studying.|listened|listen|listening|to listen|2|enjoy + V-ing.
+17|They decided ___ a new apartment near the city center.|to rent|rented|renting|rent|0|decide + To-V.
+18|She avoided ___ him because she didn’t want to argue.|to meet|met|meet|meeting|3|avoid + V-ing.
+19|Do you mind ___ the window? It’s a bit cold in here.|closed|closing|to close|close|1|mind + V-ing.
+20|He promised ___ me with my homework tomorrow.|help|to help|helping|helped|1|promise + To-V.
+21|I remember ___ this movie before. The ending is very sad.|watch|watching|watched|to watch|1|remember + V-ing: nhớ ĐÃ xem phim trong quá khứ.
+22|Please remember ___ off the lights before you leave.|turn|turned|turning|to turn|3|remember + To-V: nhớ PHẢI tắt đèn trước khi đi.
+23|My father has finally given up ___.|to smoke|smoked|smoking|smoke|2|give up + V-ing.
+24|We stopped at a gas station ___ some petrol.|getting|got|get|to get|3|stop + To-V: dừng lại ĐỂ mua xăng.
+25|I am looking forward to ___ you next week.|seeing|see|to see|saw|0|look forward to + V-ing (“to” là giới từ).
+26|The teacher forced all students ___ the assignment on time.|to finish|finished|finish|finishing|0|force O + To-V.
+27|Have you finished ___ that book yet?|readed|reading|to read|read|1|finish + V-ing.
+28|I regret ___ you that your application has been rejected.|to inform|informed|inform|informing|0|regret + to inform: tiếc phải báo tin buồn.
+29|She regretted ___ that expensive dress because she never wore it.|bought|to buy|buy|buying|3|regret + V-ing: hối hận vì ĐÃ mua.
+30|They suggested ___ to the beach for the weekend.|go|to go|going|went|2|suggest + V-ing.
+31|I’m learning ___ English because it’s necessary for my job.|speaking|speak|spoken|to speak|3|learn + To-V (học cách làm gì).
+32|Would you like ___ a cup of tea?|have|had|having|to have|3|would like + To-V.
+33|He tried ___ the heavy box, but he was too weak.|lift|to lift|lifting|lifted|1|try + To-V: cố gắng, nỗ lực nâng.
+34|If your computer doesn’t work, try ___ it.|to restart|restarted|restart|restarting|3|try + V-ing: thử khởi động lại xem máy có chạy không.
+35|The mother made her son ___ his room.|to clean|cleaning|clean|cleaned|2|make + O + V (nguyên thể).
+36|My parents don’t let me ___ out late at night.|to go|going|went|go|3|let + O + V (nguyên thể).
+37|She is interested in ___ foreign languages.|to learn|learn|learning|learned|2|Sau giới từ “in” là V-ing.
+38|We expected ___ the match, but we lost.|win|winning|to win|won|2|expect + To-V.
+39|He denied ___ the money from the safe.|to steal|steal|stole|stealing|3|deny + V-ing.
+40|You should practice ___ piano every day to improve.|played|to play|playing|play|2|practice + V-ing.
+41|I can’t afford ___ a new car right now. I don’t have enough money.|bought|to buy|buy|buying|1|afford + To-V.
+42|The doctor advised him ___ a rest for a few days.|taking|to take|take|took|1|advise O + To-V.
+43|It’s difficult ___ this math problem.|solved|to solve|solving|solve|1|It’s + tính từ + To-V.
+44|We delayed ___ the meeting until next Monday.|held|hold|holding|to hold|2|delay + V-ing.
+45|She managed ___ the report on time despite the heavy workload.|to complete|complete|completed|completing|0|manage + To-V.
+46|I apologize for ___ so late.|arriving|arrive|arrived|to arrive|0|Sau giới từ “for” là V-ing.
+47|Don’t forget ___ your umbrella. It’s going to rain.|took|to take|taking|take|1|forget + To-V: đừng quên PHẢI mang ô.
+48|I will never forget ___ her for the first time. She was beautiful.|to meet|meeting|meet|met|1|forget + V-ing: không quên việc ĐÃ gặp (kỷ niệm quá khứ).
+49|They plan ___ a new hospital in this area.|built|build|to build|building|2|plan + To-V.
+50|He threatened ___ the police if they didn’t stop the noise.|to call|calling|called|call|0|threaten + To-V.
+51|I recommend ___ this book. It’s very informative.|readed|to read|reading|read|2|recommend + V-ing.
+52|She refused ___ the contract because of unfair terms.|to sign|signed|signing|sign|0|refuse + To-V.
+53|We are considering ___ to a bigger house.|move|moved|moving|to move|2|consider + V-ing.
+54|The heavy rain prevented us from ___ for a picnic.|go|going|went|to go|1|Sau giới từ “from” là V-ing.
+55|Can you help me ___ this heavy luggage?|carried|carry|carrying|to carrying|1|help + O + V (nguyên thể).
+56|He admitted ___ the mistake in the financial report.|make|made|to make|making|3|admit + V-ing.
+57|The man offered ___ me a lift to the station.|give|to give|giving|gave|1|offer + To-V.
+58|I can’t imagine ___ without my smartphone.|to live|living|lived|live|1|imagine + V-ing.
+59|My father taught me how ___ a bike when I was five.|riding|rode|to ride|ride|2|how + To-V.
+60|Keep ___! You are doing a great job.|tried|try|trying|to try|2|keep + V-ing.
+61|They risked ___ everything in that dangerous investment.|to lose|losing|lost|lose|1|risk + V-ing.
+62|I didn’t mean ___ you. I’m so sorry.|hurted|hurting|hurt|to hurt|3|mean + To-V = có ý định làm gì.
+63|It’s no use ___ about the past. Let’s move on.|to worry|worried|worry|worrying|3|Cấu trúc cố định: It’s no use + V-ing.
+64|She failed ___ the entrance exam because she didn’t study enough.|pass|to pass|passed|passing|1|fail + To-V.
+65|He is busy ___ for his upcoming presentation.|prepared|prepare|preparing|to prepare|2|be busy + V-ing.`}
+];
+/* fx */
+const fx=$("#fx");for(let i=0;i<6;i++){const e=document.createElement("i"),z=80+Math.random()*160;e.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;width:${z}px;height:${z}px;animation-delay:${-Math.random()*10}s`;fx.appendChild(e)}
+/* sound */
+let ac;function tone(f,t,d,ty){const o=ac.createOscillator(),g=ac.createGain();o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(.15,ac.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+t+d);o.connect(g);g.connect(ac.destination);o.start(ac.currentTime+t);o.stop(ac.currentTime+t+d)}
+function snd(ok){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ok){tone(660,0,.15,"sine");tone(880,.12,.25,"sine")}else{tone(220,0,.18,"sawtooth");tone(150,.15,.3,"sawtooth")}}catch(e){}}
+/* app */
+let ok=0,tot=0,N=0;
+$("#nv").innerHTML=S.map((s,i)=>`<a href="#s${i}">${s.k}</a>`).join("")+`<span class="sc" id="sc">Đúng 0/0</span>`;
+$("#app").innerHTML=S.map((s,si)=>{
+ s.q=s.d?s.d.split("\n").map(l=>{const p=l.split("|");return{n:p[0],s:p[1],o:p.slice(2,6),a:+p[6],e:p[7]}}):[];
+ s.mm=s.m?s.m.split("\n").map(l=>{const p=l.split("|");return{s:p[0],a:p[1],e:p[2]}}):[];
+ N+=s.q.length+s.mm.length;
+ return `<section class="rv" id="s${si}"><div class="tab" style="--i:${si%4}"><h2>${s.t}</h2></div><div class="fd">${s.sub?`<p style="color:var(--mute)">${s.sub}</p>`:""}${s.h?`<div class="th">${s.h}</div>`:""}${s.mm.length?`<div class="mh">✏ ${s.mt}</div>`+s.mm.map((m,mi)=>`<div class="q" data-s="${si}" data-m="${mi}"><p><small>${mi+1}.</small> ${m.s.replace("___","<b>______</b>")}</p><input placeholder="Nhập đáp án" autocomplete="off"><button class="bt">Kiểm tra</button><div class="ex"></div></div>`).join(""):""}${s.q.map((q,qi)=>`<div class="q" data-s="${si}" data-q="${qi}"><p><small>Câu ${q.n}.</small> ${q.s.replace("___","<b>______</b>")}</p>${q.o.map((o,j)=>`<button class="o" data-j="${j}">${"ABCD"[j]}. ${o}</button>`).join("")}<div class="ex"></div></div>`).join("")}</div></section>`}).join("");
+function done(g){tot++;if(g)ok++;snd(g);$("#sc").textContent=`Đúng ${ok}/${tot}`;if(tot==N){$("#fs").textContent=`${ok} / ${N}`;$("#fp").textContent=`${Math.round(ok/N*100)}% câu đúng`;$("#sum").classList.add("show");$("#sum").scrollIntoView({behavior:"smooth",block:"center"})}}
+function chk(q){const inp=q.querySelector("input"),bt=q.querySelector(".bt");if(!inp||inp.disabled||!inp.value.trim())return;const m=S[q.dataset.s].mm[q.dataset.m],nz=s=>s.toLowerCase().replace(/[’]/g,"'").replace(/\s+/g," ").trim(),g=nz(inp.value)==nz(m.a);inp.disabled=bt.disabled=true;inp.style.borderColor=g?"var(--ok)":"var(--bad)";const x=q.querySelector(".ex");x.innerHTML=`${g?"✔ Chính xác.":"✘ Chưa đúng."} Đáp án: <b>${m.a}</b>. ${m.e}`;x.classList.add("show");done(g)}
+$("#app").onclick=e=>{const bt=e.target.closest(".bt");if(bt){chk(bt.closest(".q"));return}
+ const b=e.target.closest(".o");if(!b||b.disabled)return;const q=b.closest(".q"),it=S[q.dataset.s].q[q.dataset.q],g=+b.dataset.j==it.a,bs=q.querySelectorAll(".o");
+ bs.forEach(x=>x.disabled=true);bs[it.a].classList.add("ok");if(!g)b.classList.add("no");
+ const x=q.querySelector(".ex");x.innerHTML=`${g?"✔ Chính xác.":"✘ Chưa đúng."} Đáp án: <b>${"ABCD"[it.a]}</b>. ${it.e}`;x.classList.add("show");done(g)};
+$("#app").onkeydown=e=>{if(e.key=="Enter"&&e.target.tagName=="INPUT")chk(e.target.closest(".q"))};
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.03});
+document.querySelectorAll(".rv").forEach(s=>io.observe(s));
+const nl=[...document.querySelectorAll("nav a")],io2=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){nl.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+x.target.id))}}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("section").forEach(s=>io2.observe(s));
+</script>
+</body>
+</html>
